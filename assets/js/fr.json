@@ -62,5 +62,9 @@
   "followUs": "Suivez-nous",
   "followLink": "Suivre",
   "visitUs": "Visitez Notre Bureau",
-  "mapPlaceholder": "Carte interactive à venir bientôt"
+  "mapPlaceholder": "Carte interactive à venir bientôt",
+  "placeholderName": "Votre nom",
+  "placeholderEmail": "votre.email@exemple.com",
+  "placeholderSubject": "Comment pouvons-nous vous aider?",
+  "placeholderMessage": "Parlez-nous plus de votre demande..."
 }

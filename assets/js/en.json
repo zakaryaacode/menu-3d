@@ -62,5 +62,9 @@
   "followUs": "Follow Us",
   "followLink": "Follow",
   "visitUs": "Visit Our Office",
-  "mapPlaceholder": "Interactive map coming soon"
+  "mapPlaceholder": "Interactive map coming soon",
+  "placeholderName": "Your name",
+  "placeholderEmail": "your.email@example.com",
+  "placeholderSubject": "How can we help?",
+  "placeholderMessage": "Tell us more about your inquiry..."
 }

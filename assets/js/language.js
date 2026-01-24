@@ -22,10 +22,15 @@ function updatePageLanguage() {
   elements.forEach(element => {
     const key = element.getAttribute('data-lang-key');
     if (translations[key]) {
-      // Handle elements with children (like hero-title with spans)
-      if (element.querySelector('span')) {
-        // Don't replace children, just leave as is
-      } else {
+      // Handle placeholder attributes
+      if (element.hasAttribute('placeholder')) {
+        element.setAttribute('placeholder', translations[key]);
+      }
+      // Handle elements with child elements (like hero-title with spans)
+      else if (element.children.length > 0 && element.tagName !== 'INPUT' && element.tagName !== 'TEXTAREA') {
+        // Don't replace textContent if it has child elements
+      } 
+      else {
         element.textContent = translations[key];
       }
     }
