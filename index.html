@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu-3D</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="assets/css/preloader.css" />
+    <link rel="stylesheet" href="assets/css/theme-switch.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/cardgrid.css" />
+    <link rel="stylesheet" href="assets/css/hero.css" />
+    <link rel="stylesheet" href="assets/css/button.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+  <body class="light-theme" data-theme="light">
+    <!-- Preloader / Splash Screen -->
+    <div id="preloader" class="preloader">
+      <div class="preloader-content">
+        <img 
+          src="assets/img/nyq7001e1srmw0cvxgwbfctb2w-Photoroom.png" 
+          alt="Logo" 
+          class="preloader-image preloader-image-light"
+        />
+        <img 
+          src="assets/img/Gemini_Generated_Image_o61mduo61mduo61m-Photoroom.png" 
+          alt="Logo" 
+          class="preloader-image preloader-image-dark"
+        />
+        <p class="preloader-text">Loading</p>
+      </div>
+    </div>
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="#" class="logo">
+          <img
+            src="assets/img/nyq7001e1srmw0cvxgwbfctb2w-Photoroom.png"
+            alt="Logo"
+            class="logo-light"
+          />
+          <img
+            src="assets/img/Gemini_Generated_Image_o61mduo61mduo61m-Photoroom.png"
+            alt="Logo"
+            class="logo-dark"
+          />
+        </a>
+      </div>
+
+      <div class="nav-right">
+        <div class="lang-dropdown" id="lang-dropdown">
+          <button class="lang-btn" id="lang-btn" title="Select Language">
+            <i class="fas fa-globe"></i>
+          </button>
+          <div class="lang-menu">
+            <button class="lang-option" data-lang="en">English</button>
+            <button class="lang-option" data-lang="fr">Français</button>
+          </div>
+        </div>
+        <label class="theme-switch">
+          <input type="checkbox" id="theme-toggle" class="theme-switch__checkbox" />
+          <label class="theme-switch__container" for="theme-toggle">
+            <div class="theme-switch__circle-container">
+              <div class="theme-switch__sun-moon-container">
+                <div class="theme-switch__moon">
+                  <div class="theme-switch__spot"></div>
+                  <div class="theme-switch__spot"></div>
+                  <div class="theme-switch__spot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="theme-switch__stars-container">★★★</div>
+            <div class="theme-switch__clouds"></div>
+          </label>
+        </label>
+        <div class="hamburger-menu" id="menu-btn">
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <aside class="side-menu" id="side-menu">
+      <button class="close-btn" id="close-btn">&times;</button>
+      <ul class="menu-links">
+        <li><a href="#" data-lang-key="home">Home</a></li>
+        <li><a href="#" data-lang-key="collection">Collection</a></li>
+        <li><a href="#" data-lang-key="about">About Us</a></li>
+        <li><a href="#" data-lang-key="contact">Contact</a></li>
+      </ul>
+    </aside>
+
+    <header class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span data-lang-key="heroTitle"> </span> <span class="gold-text" data-lang-key="heroTitleGold"></span>
+        </h1>
+        <p class="hero-subtitle" data-lang-key="heroSubtitle">
+          Discover the art of sophistication and refined living.
+        </p>
+      </div>
+    </header>
+
+    <section class="cards-section">
+      <div class="section-header">
+        <h2 data-lang-key="ourExclusives">Our Exclusives</h2>
+        <div class="separator"></div>
+      </div>
+
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-image">
+            <img src="assets/img/download.jpg" alt="Luxury Item" />
+          </div>
+          <div class="card-content">
+            <h3 data-lang-key="royalEdition">Royal Edition</h3>
+            <button class="card-btn" data-lang-key="viewDetails">View Details</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image">
+            <img
+              src="assets/img/Gemini_Generated_Image_bmwje3bmwje3bmwj.png"
+              alt="Gold Watch"
+            />
+          </div>
+          <div class="card-content">
+            <h3 data-lang-key="goldenEra">Golden Era</h3>
+            <button class="card-btn" data-lang-key="viewDetails">View Details</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image">
+            <img
+              src="assets/img/Gemini_Generated_Image_biocvebiocvebioc.jpeg"
+              alt="Perfume"
+            />
+          </div>
+          <div class="card-content">
+            <h3 data-lang-key="essenceNo5">Essence No.5</h3>
+            <button class="card-btn" data-lang-key="viewDetails">View Details</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image">
+            <img
+              src="assets/img/Gemini_Generated_Image_kly3mtkly3mtkly3.png"
+              alt="Handbag"
+            />
+          </div>
+          <div class="card-content">
+            <h3 data-lang-key="velvetTouch">Velvet Touch</h3>
+            <button class="card-btn" data-lang-key="viewDetails">View Details</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image">
+            <img
+              src="assets/img/Gemini_Generated_Image_sw9xsw9xsw9xsw9x.jpeg"
+              alt="Interior"
+            />
+          </div>
+          <div class="card-content">
+            <h3 data-lang-key="modernSuite">Modern Suite</h3>
+            <button class="card-btn" data-lang-key="viewDetails">View Details</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image">
+            <img
+              src="assets/img/Gemini_Generated_Image_isvxqfisvxqfisvx.png"
+              alt="Shoes"
+            />
+          </div>
+          <div class="card-content">
+           <h3 data-lang-key="zaki"></h3>
+            <button class="card-btn">View Details</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image">
+            <img
+              src="assets/img/Gemini_Generated_Image_x4mehtx4mehtx4me.png"
+              alt="Luxury Bracelet"
+            />
+          </div>
+          <div class="card-content">
+            <h3 data-lang-key="luxuryBracelet"></h3>
+            <button class="card-btn" data-lang-key="viewDetails"></button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image">
+            <img
+              src="assets/img/Gemini_Generated_Image_q3peviq3peviq3pe.png"
+              alt="Premium Collection"
+            />
+          </div>
+          <div class="card-content">
+            <h3 data-lang-key="premiumCollection">Premium Collection</h3>
+            <button class="card-btn" data-lang-key="viewDetails">View Details</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/preloader.js"></script>
+    <script src="assets/js/language.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
+  </body>
+</html>
