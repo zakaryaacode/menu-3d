@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Menu-3D</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="assets/css/preloader.css" />
+    <link rel="stylesheet" href="assets/css/theme-switch.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/cardgrid.css" />
+    <link rel="stylesheet" href="assets/css/hero.css" />
+    <link rel="stylesheet" href="assets/css/button.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/sidemenu.css" />
+    <style>
+      /* About Page Specific Styles */
+      .about-hero {
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0 1rem;
+        background: radial-gradient(circle at center, transparent 0%, var(--bg-color) 100%);
+        position: relative;
+        margin-top: 60px;
+      }
+
+      .about-hero h1 {
+        font-size: 5rem;
+        margin-bottom: 1.5rem;
+        color: var(--text-color);
+      }
+
+      .about-hero p {
+        font-size: 1.3rem;
+        color: var(--accent-gold);
+        letter-spacing: 2px;
+      }
+
+      .about-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 4rem 5%;
+      }
+
+      .about-section {
+        margin-bottom: 5rem;
+      }
+
+      .about-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--text-color);
+        font-family: var(--font-head);
+      }
+
+      .about-section-title {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .about-section-title::after {
+        content: '';
+        width: 80px;
+        height: 3px;
+        background-color: var(--accent-gold);
+      }
+
+      .about-section p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: var(--text-color);
+        opacity: 0.9;
+        margin-bottom: 1.5rem;
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .about-feature {
+        background-color: var(--card-bg);
+        border: 2px solid var(--accent-gold);
+        border-radius: 15px;
+        padding: 2rem;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .about-feature:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(212, 175, 55, 0.2);
+      }
+
+      .about-feature i {
+        font-size: 2.5rem;
+        color: var(--accent-gold);
+        margin-bottom: 1rem;
+      }
+
+      .about-feature h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        font-family: var(--font-head);
+      }
+
+      .about-feature p {
+        font-size: 1rem;
+      }
+
+      .team-section {
+        margin-top: 4rem;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .team-member {
+        background-color: var(--card-bg);
+        border: 2px solid var(--accent-gold);
+        border-radius: 15px;
+        overflow: hidden;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+
+      .team-member:hover {
+        transform: scale(1.05);
+      }
+
+      .team-member-image {
+        width: 100%;
+        height: 250px;
+        background: linear-gradient(135deg, var(--accent-gold), rgba(212, 175, 55, 0.3));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+      }
+
+      .team-member-info {
+        padding: 2rem;
+      }
+
+      .team-member h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+        font-family: var(--font-head);
+      }
+
+      .team-member p {
+        color: var(--accent-gold);
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+      }
+
+      @media (max-width: 768px) {
+        .about-hero {
+          height: 60vh;
+          margin-top: 50px;
+        }
+
+        .about-hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .about-section h2 {
+          font-size: 1.8rem;
+        }
+
+        .about-content {
+          padding: 2rem 3%;
+        }
+      }
+    </style>
+  </head>
+  <body class="light-theme" data-theme="light">
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+      <div class="preloader-content">
+        <img 
+          src="assets/img/nyq7001e1srmw0cvxgwbfctb2w-Photoroom.png" 
+          alt="Logo" 
+          class="preloader-image preloader-image-light"
+        />
+        <img 
+          src="assets/img/Gemini_Generated_Image_o61mduo61mduo61m-Photoroom.png" 
+          alt="Logo" 
+          class="preloader-image preloader-image-dark"
+        />
+        <p class="preloader-text">Loading</p>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="index.html" class="logo">
+          <img
+            src="assets/img/nyq7001e1srmw0cvxgwbfctb2w-Photoroom.png"
+            alt="Logo"
+            class="logo-light"
+          />
+          <img
+            src="assets/img/Gemini_Generated_Image_o61mduo61mduo61m-Photoroom.png"
+            alt="Logo"
+            class="logo-dark"
+          />
+        </a>
+      </div>
+
+      <div class="nav-right">
+        <div class="lang-dropdown" id="lang-dropdown">
+          <button class="lang-btn" id="lang-btn" title="Select Language">
+            <i class="fas fa-globe"></i>
+          </button>
+          <div class="lang-menu">
+            <button class="lang-option" data-lang="en">English</button>
+            <button class="lang-option" data-lang="fr">Français</button>
+          </div>
+        </div>
+        <label class="theme-switch">
+          <input type="checkbox" id="theme-toggle" class="theme-switch__checkbox" />
+          <label class="theme-switch__container" for="theme-toggle">
+            <div class="theme-switch__circle-container">
+              <div class="theme-switch__sun-moon-container">
+                <div class="theme-switch__moon">
+                  <div class="theme-switch__spot"></div>
+                  <div class="theme-switch__spot"></div>
+                  <div class="theme-switch__spot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="theme-switch__stars-container">★★★</div>
+            <div class="theme-switch__clouds"></div>
+          </label>
+        </label>
+        <div class="hamburger-menu" id="menu-btn">
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <!-- Side Menu -->
+    <aside class="side-menu" id="side-menu">
+      <button class="close-btn" id="close-btn">&times;</button>
+      <ul class="menu-links">
+        <li><a href="index.html" data-lang-key="home">Home</a></li>
+        <li><a href="index.html" data-lang-key="collection">Collection</a></li>
+        <li><a href="about.html" class="active" data-lang-key="about">About Us</a></li>
+        <li><a href="contact.html" data-lang-key="contact">Contact</a></li>
+      </ul>
+    </aside>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+      <div class="hero-content">
+        <h1 data-lang-key="aboutTitle">About Us</h1>
+        <p data-lang-key="aboutSubtitle">Crafting exceptional dining experiences through innovation</p>
+      </div>
+    </section>
+
+    <!-- About Content -->
+    <main class="about-content">
+      <!-- Story Section -->
+      <section class="about-section">
+        <div class="about-section-title">
+          <h2 data-lang-key="ourStory">Our Story</h2>
+        </div>
+        <p data-lang-key="storyContent">
+          At Menu-3D, we believe that dining is not just about taste—it's about experience. Our journey began with a simple vision: to revolutionize how customers interact with menus by bringing food to life through cutting-edge 3D and AR technology.
+        </p>
+        <p data-lang-key="storyContent2">
+          Every dish tells a story, and we're here to help you discover it before you even take the first bite. From visualization to indulgence, we're committed to making your dining experience unforgettable.
+        </p>
+      </section>
+
+      <!-- Mission Section -->
+      <section class="about-section">
+        <div class="about-section-title">
+          <h2 data-lang-key="ourMission">Our Mission</h2>
+        </div>
+        <p data-lang-key="missionContent">
+          Our mission is to bridge the gap between imagination and reality in the culinary world. We empower restaurants and diners alike with innovative technology that transforms menus into immersive experiences, making food choices more confident and enjoyable.
+        </p>
+      </section>
+
+      <!-- Why Choose Us Section -->
+      <section class="about-section">
+        <div class="about-section-title">
+          <h2 data-lang-key="whyChooseUs">Why Choose Menu-3D</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-feature">
+            <i class="fas fa-cube"></i>
+            <h3 data-lang-key="feature1Title">3D Visualization</h3>
+            <p data-lang-key="feature1">Experience your meals in stunning 3D detail before ordering</p>
+          </div>
+          <div class="about-feature">
+            <i class="fas fa-mobile-alt"></i>
+            <h3 data-lang-key="feature2Title">AR Technology</h3>
+            <p data-lang-key="feature2">See how dishes look with augmented reality in your own space</p>
+          </div>
+          <div class="about-feature">
+            <i class="fas fa-leaf"></i>
+            <h3 data-lang-key="feature3Title">Quality Focus</h3>
+            <p data-lang-key="feature3">We highlight the finest details and ingredients of every dish</p>
+          </div>
+          <div class="about-feature">
+            <i class="fas fa-globe"></i>
+            <h3 data-lang-key="feature4Title">Global Standard</h3>
+            <p data-lang-key="feature4">Premium experience adapted for restaurants worldwide</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Values Section -->
+      <section class="about-section">
+        <div class="about-section-title">
+          <h2 data-lang-key="ourValues">Our Values</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-feature">
+            <i class="fas fa-star"></i>
+            <h3 data-lang-key="valueInnovation">Innovation</h3>
+            <p data-lang-key="valueInnovationDesc">Constantly pushing boundaries with technology</p>
+          </div>
+          <div class="about-feature">
+            <i class="fas fa-heart"></i>
+            <h3 data-lang-key="valueExcellence">Excellence</h3>
+            <p data-lang-key="valueExcellenceDesc">Delivering premium experiences every time</p>
+          </div>
+          <div class="about-feature">
+            <i class="fas fa-handshake"></i>
+            <h3 data-lang-key="valuePartnership">Partnership</h3>
+            <p data-lang-key="valuePartnershipDesc">Working closely with our restaurant partners</p>
+          </div>
+          <div class="about-feature">
+            <i class="fas fa-users"></i>
+            <h3 data-lang-key="valueCommunity">Community</h3>
+            <p data-lang-key="valueCommunityDesc">Building a dining community of food lovers</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/preloader.js"></script>
+    <script src="assets/js/language.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

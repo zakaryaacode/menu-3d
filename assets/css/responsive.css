@@ -22,7 +22,7 @@
     }
 
     .theme-switch {
-        --toggle-size: 18px;
+        --toggle-size: 10px;
         padding-top: 4px;
     }
 
@@ -37,7 +37,7 @@
     }
 
     .menu-links li a {
-        font-size: 1rem;
+        font-size: 1.6rem;
         padding: 0.8rem 0;
     }
 
@@ -151,20 +151,23 @@
 
     /* ========== SIDE MENU ========== */
     .side-menu {
-        width: 80vw;
+        width: 70vw;
         padding: 3rem 1.5rem;
     }
 
     .menu-links li a {
-        font-size: 1.65rem;
+        font-size: 1.55rem;
         padding: 0.4rem 0;
     }
 
     /* ========== HERO SECTION ========== */
     .hero-section {
-        height: 30vh;
+        height: 35vh;
         padding-top: 70px;
     }
+    
+
+
 
     .hero-content {
         padding: 0 1rem;

@@ -73,11 +73,11 @@
 }
 
 .card-btn {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid var(--accent-gold);
+    padding-bottom: 2px;
+    border: 1px solid var(--accent-gold);
+    border-radius: 13px;
     color: var(--text-color);
-    transition: color 0.3s;
 }
