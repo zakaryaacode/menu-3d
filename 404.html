@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found</title>
+    <script>
+        // GitHub Pages 404 redirect handler
+        (function() {
+            const path = window.location.pathname;
+            // Remove trailing slash and check if it's trying to access a file in assets folder incorrectly
+            const segments = path.split('/').filter(Boolean);
+            
+            // If the last segment is trying to access index.html incorrectly, redirect to root index
+            if (segments[segments.length - 1] === 'index.html' || 
+                (segments.length > 1 && segments[0] === 'assets')) {
+                
+                // Get the repository name from the path (for GitHub Pages projects)
+                const repoName = segments[0];
+                
+                // Redirect to the correct index.html
+                const correctPath = '/' + repoName + '/';
+                window.location.replace(correctPath);
+            }
+        })();
+    </script>
+</head>
+<body>
+    <h1>Page Not Found</h1>
+    <p>Redirecting...</p>
+</body>
+</html>

@@ -5,7 +5,19 @@ let translations = {};
 // Load language files
 async function loadLanguage(lang) {
   try {
-    const response = await fetch(`assets/js/${lang}.json`);
+    // Detect the correct path based on the current page location
+    let basePath = 'assets/js/';
+    
+    // Check if we're in a subdirectory (e.g., assets/3D/pizza/)
+    const currentPath = window.location.pathname;
+    const depth = (currentPath.match(/\//g) || []).length;
+    
+    // If we're in assets/3D/X/ folder (3 levels deep from root), adjust the path
+    if (currentPath.includes('/assets/3D/')) {
+      basePath = '../../js/';
+    }
+    
+    const response = await fetch(`${basePath}${lang}.json`);
     const data = await response.json();
     translations = data;
     currentLanguage = lang;
