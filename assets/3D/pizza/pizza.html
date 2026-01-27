@@ -1,16 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Delicious Pizza</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"
+    ></script>
     <link rel="stylesheet" href="../../css/responsive.css" />
     <link rel="stylesheet" href="../../css/preloader.css" />
     <link rel="stylesheet" href="../../css/theme-switch.css" />
@@ -18,210 +26,255 @@
     <link rel="stylesheet" href="../../css/navbar.css" />
     <link rel="stylesheet" href="../../css/sidemenu.css" />
     <link rel="stylesheet" href="../../css/ar-menu.css" />
-</head>
-<body class="light-theme" data-theme="light">
+    <link rel="stylesheet" href="../../css/hero.css" />
+    <style>
+      .theme-switch {
+        --toggle-size: 10px;
+        padding-top: 4px;
+      }
+    </style>
+  </head>
+  <body class="light-theme" data-theme="light">
     <!-- Preloader -->
     <div id="preloader" class="preloader">
-        <div class="preloader-content">
-            <img 
-                src="../../img/nyq7001e1srmw0cvxgwbfctb2w-Photoroom.png" 
-                alt="Logo" 
-                class="preloader-image preloader-image-light"
-            />
-            <img 
-                src="../../img/Gemini_Generated_Image_o61mduo61mduo61m-Photoroom.png" 
-                alt="Logo" 
-                class="preloader-image preloader-image-dark"
-            />
-            <p class="preloader-text">Loading</p>
-        </div>
+      <div class="preloader-content">
+        <img
+          src="../../img/nyq7001e1srmw0cvxgwbfctb2w-Photoroom.png"
+          alt="Logo"
+          class="preloader-image preloader-image-light"
+        />
+        <img
+          src="../../img/Gemini_Generated_Image_o61mduo61mduo61m-Photoroom.png"
+          alt="Logo"
+          class="preloader-image preloader-image-dark"
+        />
+        <p class="preloader-text">Loading</p>
+      </div>
     </div>
 
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="nav-left">
-            <a href="../../index.html" class="logo">
-                <img
-                    src="../../img/nyq7001e1srmw0cvxgwbfctb2w-Photoroom.png"
-                    alt="Logo"
-                    class="logo-light"
-                />
-                <img
-                    src="../../img/Gemini_Generated_Image_o61mduo61mduo61m-Photoroom.png"
-                    alt="Logo"
-                    class="logo-dark"
-                />
-            </a>
-        </div>
+      <div class="nav-left">
+        <a href="../../index.html" class="logo">
+          <img
+            src="../../img/nyq7001e1srmw0cvxgwbfctb2w-Photoroom.png"
+            alt="Logo"
+            class="logo-light"
+          />
+          <img
+            src="../../img/Gemini_Generated_Image_o61mduo61mduo61m-Photoroom.png"
+            alt="Logo"
+            class="logo-dark"
+          />
+        </a>
+      </div>
 
-        <div class="nav-right">
-            <div class="lang-dropdown" id="lang-dropdown">
-                <button class="lang-btn" id="lang-btn" title="Select Language">
-                    <i class="fas fa-globe"></i>
-                </button>
-                <div class="lang-menu">
-                    <button class="lang-option" data-lang="en">English</button>
-                    <button class="lang-option" data-lang="fr">Français</button>
-                </div>
-            </div>
-            <label class="theme-switch">
-                <input type="checkbox" id="theme-toggle" class="theme-switch__checkbox" />
-                <label class="theme-switch__container" for="theme-toggle">
-                    <div class="theme-switch__circle-container">
-                        <div class="theme-switch__sun-moon-container">
-                            <div class="theme-switch__moon">
-                                <div class="theme-switch__spot"></div>
-                                <div class="theme-switch__spot"></div>
-                                <div class="theme-switch__spot"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="theme-switch__stars-container">★★★</div>
-                    <div class="theme-switch__clouds"></div>
-                </label>
-            </label>
-            <div class="hamburger-menu" id="menu-btn">
-                <div class="line line-1"></div>
-                <div class="line line-2"></div>
-                <div class="line line-3"></div>
-            </div>
+      <div class="nav-right">
+        <div class="lang-dropdown" id="lang-dropdown">
+          <button class="lang-btn" id="lang-btn" title="Select Language">
+            <i class="fas fa-globe"></i>
+          </button>
+          <div class="lang-menu">
+            <button class="lang-option" data-lang="en">English</button>
+            <button class="lang-option" data-lang="fr">Français</button>
+          </div>
         </div>
+        <label class="theme-switch">
+          <input
+            type="checkbox"
+            id="theme-toggle"
+            class="theme-switch__checkbox"
+          />
+          <label class="theme-switch__container" for="theme-toggle">
+            <div class="theme-switch__circle-container">
+              <div class="theme-switch__sun-moon-container">
+                <div class="theme-switch__moon">
+                  <div class="theme-switch__spot"></div>
+                  <div class="theme-switch__spot"></div>
+                  <div class="theme-switch__spot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="theme-switch__stars-container"></div>
+            <div class="theme-switch__clouds"></div>
+          </label>
+        </label>
+        <div class="hamburger-menu" id="menu-btn">
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </div>
+      </div>
     </nav>
 
     <div class="menu-overlay" id="menu-overlay"></div>
 
     <aside class="side-menu" id="side-menu">
-        <button class="close-btn" id="close-btn">&times;</button>
-        <ul class="menu-links">
-            <li><a href="../../index.html" data-lang-key="home">Home</a></li>
-            <li><a href="../../about.html" data-lang-key="about">About Us</a></li>
-            <li><a href="../../contact.html" data-lang-key="contact">Contact</a></li>
-        </ul>
+      <button class="close-btn" id="close-btn">&times;</button>
+      <ul class="menu-links">
+        <li><a href="../../../index.html" data-lang-key="home">Home</a></li>
+        <li><a href="../../../about.html" data-lang-key="about">About Us</a></li>
+        <li>
+          <a href="../../../contact.html" data-lang-key="contact">Contact</a>
+        </li>
+      </ul>
     </aside>
 
     <!-- Main Content -->
     <section class="menu-section">
-        
-        <a href="../../../index.html" class="back-link">
-            <i class="fas fa-arrow-left"></i>
-            Back to Menu
-        </a>
+      <a href="../../../index.html" class="back-link">
+        <i class="fas fa-arrow-left"></i>
+        Back to Menu
+      </a>
 
-        <header class="section-header">
-            <h2 class="section-title">Delicious Pizza</h2>
-            <p class="section-subtitle">Experience our signature pizza in Augmented Reality</p>
-        </header>
+      <header class="section-header">
+        <h2 class="section-title">Delicious Pizza</h2>
+        <p class="section-subtitle">
+          Experience our signature pizza in Augmented Reality
+        </p>
+      </header>
 
-        <div class="menu-grid">
+      <div class="menu-grid">
+        <article class="dish-card">
+          <div class="model-wrapper">
+            <model-viewer
+              src="3d/pizza-v1.glb"
+              poster="https://modelviewer.dev/shared-assets/models/hamburger-poster.webp"
+              alt="A 3D model of Pizza"
+              shadow-intensity="1"
+              exposure="1.2"
+              camera-controls
+              touch-action="pan-y"
+              auto-rotate
+              ar
+              ar-modes="webxr scene-viewer quick-look"
+              loading="lazy"
+            >
+              <button slot="ar-button" class="ar-button">
+                <svg
+                  class="ar-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"
+                  ></path>
+                </svg>
+                View in AR
+              </button>
 
-            <article class="dish-card">
-                <div class="model-wrapper">
-                    <model-viewer 
-                        src="3d/pizza-v1.glb"
-                        poster="https://modelviewer.dev/shared-assets/models/hamburger-poster.webp"
-                        alt="A 3D model of Pizza"
-                        shadow-intensity="1"
-                        exposure="1.2"
-                        camera-controls
-                        touch-action="pan-y"
-                        auto-rotate
-                        ar
-                        ar-modes="webxr scene-viewer quick-look"
-                        loading="lazy"> 
-                        <button slot="ar-button" class="ar-button">
-                            <svg class="ar-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path></svg>
-                            View in AR
-                        </button>
-
-                        <div class="progress-bar hide" slot="progress-bar">
-                            <div class="update-bar"></div>
-                        </div>
-                    </model-viewer>
+              <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+              </div>
+            </model-viewer>
+          </div>
+          <div class="dish-info">
+            <div>
+              <div class="dish-header">
+                <h3 class="dish-name">Margherita Deluxe</h3>
+                <span class="dish-price">$16.00</span>
+              </div>
+              <p class="dish-desc">
+                Fresh mozzarella, basil, tomato sauce on crispy wood-fired
+                dough.
+              </p>
+              <div class="dish-details">
+                <div class="detail-item">
+                  <i class="fas fa-fire"></i>
+                  <span>320 Calories</span>
                 </div>
-                <div class="dish-info">
-                    <div>
-                        <div class="dish-header">
-                            <h3 class="dish-name">Margherita Deluxe</h3>
-                            <span class="dish-price">$16.00</span>
-                        </div>
-                        <p class="dish-desc">Fresh mozzarella, basil, tomato sauce on crispy wood-fired dough.</p>
-                        <div class="dish-details">
-                            <div class="detail-item">
-                                <i class="fas fa-fire"></i>
-                                <span>320 Calories</span>
-                            </div>
-                            <div class="detail-item">
-                                <i class="fas fa-clock"></i>
-                                <span>10 min prep</span>
-                            </div>
-                            <div class="detail-item">
-                                <i class="fas fa-leaf"></i>
-                                <span>Vegetarian</span>
-                            </div>
-                            <div class="detail-item">
-                                <i class="fas fa-star"></i>
-                                <span>4.7/5 Rating</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="detail-item">
+                  <i class="fas fa-clock"></i>
+                  <span>10 min prep</span>
                 </div>
-            </article>
-
-            <article class="dish-card">
-                <div class="model-wrapper">
-                    <model-viewer 
-                        src="3d/pizza1glb-v1.glb" 
-                        poster="https://modelviewer.dev/shared-assets/models/shishkebab-poster.webp"
-                        alt="A 3D model of Pizza"
-                        shadow-intensity="1"
-                        exposure="1.2"
-                        camera-controls
-                        touch-action="pan-y"
-                        auto-rotate
-                        ar
-                        ar-modes="webxr scene-viewer quick-look"
-                        loading="lazy">
-
-                        <button slot="ar-button" class="ar-button">
-                            <svg class="ar-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path></svg>
-                            View in AR
-                        </button>
-
-                        <div class="progress-bar hide" slot="progress-bar">
-                            <div class="update-bar"></div>
-                        </div>
-                    </model-viewer>
+                <div class="detail-item">
+                  <i class="fas fa-leaf"></i>
+                  <span>Vegetarian</span>
                 </div>
-                <div class="dish-info">
-                    <div>
-                        <div class="dish-header">
-                            <h3 class="dish-name">Pepperoni Premium</h3>
-                            <span class="dish-price">$19.00</span>
-                        </div>
-                        <p class="dish-desc">Double pepperoni with extra cheese and Italian herbs on sourdough base.</p>
-                        <div class="dish-details">
-                            <div class="detail-item">
-                                <i class="fas fa-fire"></i>
-                                <span>450 Calories</span>
-                            </div>
-                            <div class="detail-item">
-                                <i class="fas fa-clock"></i>
-                                <span>12 min prep</span>
-                            </div>
-                            <div class="detail-item">
-                                <i class="fas fa-leaf"></i>
-                                <span>Meat Lover</span>
-                            </div>
-                            <div class="detail-item">
-                                <i class="fas fa-star"></i>
-                                <span>4.9/5 Rating</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="detail-item">
+                  <i class="fas fa-star"></i>
+                  <span>4.7/5 Rating</span>
                 </div>
-            </article>
+              </div>
+            </div>
+          </div>
+        </article>
 
-        </div>
+        <article class="dish-card">
+          <div class="model-wrapper">
+            <model-viewer
+              src="3d/pizza1glb-v1.glb"
+              poster="https://modelviewer.dev/shared-assets/models/shishkebab-poster.webp"
+              alt="A 3D model of Pizza"
+              shadow-intensity="1"
+              exposure="1.2"
+              camera-controls
+              touch-action="pan-y"
+              auto-rotate
+              ar
+              ar-modes="webxr scene-viewer quick-look"
+              loading="lazy"
+            >
+              <button slot="ar-button" class="ar-button">
+                <svg
+                  class="ar-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"
+                  ></path>
+                </svg>
+                View in AR
+              </button>
+
+              <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+              </div>
+            </model-viewer>
+          </div>
+          <div class="dish-info">
+            <div>
+              <div class="dish-header">
+                <h3 class="dish-name">Pepperoni Premium</h3>
+                <span class="dish-price">$19.00</span>
+              </div>
+              <p class="dish-desc">
+                Double pepperoni with extra cheese and Italian herbs on
+                sourdough base.
+              </p>
+              <div class="dish-details">
+                <div class="detail-item">
+                  <i class="fas fa-fire"></i>
+                  <span>450 Calories</span>
+                </div>
+                <div class="detail-item">
+                  <i class="fas fa-clock"></i>
+                  <span>12 min prep</span>
+                </div>
+                <div class="detail-item">
+                  <i class="fas fa-leaf"></i>
+                  <span>Meat Lover</span>
+                </div>
+                <div class="detail-item">
+                  <i class="fas fa-star"></i>
+                  <span>4.9/5 Rating</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -231,25 +284,25 @@
     <script src="../../js/main.js"></script>
 
     <script>
-        // Handle loading states for model-viewer
-        const onProgress = (event) => {
-            const progressBar = event.target.querySelector('.progress-bar');
-            const updatingBar = event.target.querySelector('.update-bar');
-            
-            if (event.detail.totalProgress === 0) {
-                progressBar.classList.remove('hide');
-            } else {
-                updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
-                if (event.detail.totalProgress === 1) {
-                    progressBar.classList.add('hide');
-                }
-            }
-        };
+      // Handle loading states for model-viewer
+      const onProgress = (event) => {
+        const progressBar = event.target.querySelector(".progress-bar");
+        const updatingBar = event.target.querySelector(".update-bar");
 
-        // Attach listeners to all model-viewers
-        document.querySelectorAll('model-viewer').forEach((viewer) => {
-            viewer.addEventListener('progress', onProgress);
-        });
+        if (event.detail.totalProgress === 0) {
+          progressBar.classList.remove("hide");
+        } else {
+          updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
+          if (event.detail.totalProgress === 1) {
+            progressBar.classList.add("hide");
+          }
+        }
+      };
+
+      // Attach listeners to all model-viewers
+      document.querySelectorAll("model-viewer").forEach((viewer) => {
+        viewer.addEventListener("progress", onProgress);
+      });
     </script>
-</body>
+  </body>
 </html>
