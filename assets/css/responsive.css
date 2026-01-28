@@ -135,9 +135,10 @@
         padding: 5px 8px;
     }
 
+
     .theme-switch {
         --toggle-size: 10px;
-        padding-top: 6px;
+        padding-top: 4px;
     }
 
     .hamburger-menu {
@@ -165,7 +166,7 @@
         height: 35vh;
         padding-top: 70px;
     }
-    
+
 
 
 
@@ -323,4 +324,3 @@
     }
 
 }
-
