@@ -374,6 +374,20 @@
         font-family: var(--font-head);
       }
 
+      .map-container {
+        width: 100%;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+      }
+
+      .map-container iframe {
+        display: block;
+        width: 100%;
+        height: 450px;
+        border-radius: 12px;
+      }
+
       .map-placeholder {
         width: 100%;
         height: 350px;
@@ -428,6 +442,10 @@
 
         .map-placeholder {
           height: 250px;
+        }
+
+        .map-container iframe {
+          height: 300px;
         }
       }
 
@@ -507,7 +525,6 @@
                 </div>
               </div>
             </div>
-            <div class="theme-switch__stars-container">★★★</div>
             <div class="theme-switch__clouds"></div>
           </label>
         </label>
@@ -552,7 +569,7 @@
             </div>
             <h3 data-lang-key="phoneLabel">Phone</h3>
             <p data-lang-key="phoneSub">Call us during business hours</p>
-            <a href="tel:+1234567890">+1 (234) 567-890</a>
+            <a>+213 549 26 67 83</a>
           </div>
 
           <!-- Email -->
@@ -562,7 +579,7 @@
             </div>
             <h3 data-lang-key="emailLabel">Email</h3>
             <p data-lang-key="emailSub">Send us an email anytime</p>
-            <a href="mailto:info@menu3d.com">info@menu3d.com</a>
+            <a href="mailto:info@menu3d.com">zakarya.code@gmail.com</a>
           </div>
 
           <!-- Hours -->
@@ -581,8 +598,8 @@
               <i class="fas fa-map-marker-alt"></i>
             </div>
             <h3 data-lang-key="locationLabel">Location</h3>
-            <p data-lang-key="locationContent">123 Luxury Avenue</p>
-            <p data-lang-key="locationCity">New York, NY 10001</p>
+            <p data-lang-key="locationContent">123 jsp win </p>
+            <p data-lang-key="locationCity">L3iiizaaa, ayayay 10001</p>
           </div>
         </div>
 
@@ -653,12 +670,18 @@
       <!-- Map Section -->
       <section class="map-section">
         <h2 data-lang-key="visitUs">Visit Our Office</h2>
-        <div class="map-placeholder">
-          <i class="fas fa-map"></i>
-          <p data-lang-key="mapPlaceholder">Interactive map coming soon</p>
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1116.1019611560553!2d-1.7404961937079197!3d34.85142955235728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd788d6eba7b3d4d%3A0x671a04792e89de17!2sPizzeria%20Tacology!5e1!3m2!1sen!2sdz!4v1769686375716!5m2!1sen!2sdz"
+            width="100%" 
+            height="450" 
+            style="border:0; border-radius: 12px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
       </section>
-    </main>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
